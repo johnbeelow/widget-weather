@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <div class="widget_weather">
+
+            <div id="loader" class="loader"></div>
+
+            <div class="sector_input" id="sector_input">
+                <form action="#">
+                    <label for="input_city"></label>
+                    <input type="text" id="input_city" name="input_city" placeholder="Введите город">
+                    <button type="submit">
+                        <img src="img/search.svg" alt="search" class="search-img" />
+                    </button>
+                </form>
+            </div>
+
+            <div class="sector_weather_panel">
+
+                <div class="info_panel">
+                    <div id="loader-background" class="loader-background"></div>
+
+                    <div class="container_city">
+                        <p id="info_city">City</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="inactive_like_city" id="info_like" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </div>
+
+                    <div class="container_temperature">
+                        <span id="info_temperature">14</span>
+                        <div class="img-weather">
+                            <img src="img/demo-cloud.png" alt="img-weather" id="info_img" />
+                        </div>
+                    </div>
+
+                    <div class="container_weather_info" id="container_weather_info">
+                        <span>Feels like: 10</span>
+                        <span>Sunrise: 03:21</span>
+                        <span>Sunset: 18:54</span>
+                    </div>
+
+
+                    <div class="container_temp_info_list" id="container_temp_info_list">
+
+                    </div>
+
+ 
+                </div>
+
+                <div class="locations_panel">
+                    <div class="added_locations">
+                        <p>Избранные города:</p>
+                    </div>
+                    <div id="list_locations" class="list_locations">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script type="module" src="./ts/index.ts"></script>
+</body>
+
+</html>

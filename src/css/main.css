@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("reset.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1f2327;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgb(217, 217, 217);
+}
+
+input::placeholder {
+  font-weight: 300;
+  color: #ffffff44;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.widget_weather {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 629px;
+  border: 1px solid #00000063;
+  background-color: #414f5e;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.loader-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3b4856f0;
+  z-index: 9;
+  display: none;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 8px solid #f3f3f35c;
+  border-top: 8px solid #f7f8f8;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  z-index: 10;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sector_input {
+  position: relative;
+  display: flex;
+  width: 600px;
+  height: 50px;
+  border-bottom: 1px solid #00000063;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.sector_input input {
+  width: 600px;
+  height: 100%;
+  font-size: 18px;
+  padding: 12px;
+  box-sizing: border-box;
+  background: none;
+  background-color: #8a96a593;
+  outline: none;
+  font-weight: 380;
+  color: rgb(240, 237, 237);
+}
+
+.sector_input button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.sector_input button:hover {
+  filter: invert(100%);
+}
+
+.sector_weather_panel {
+  display: flex;
+  width: 600px;
+  height: 308px;
+}
+
+.info_panel {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 584px;
+  background-color: #485766f0;
+  border-right: 1px solid #00000063;
+  cursor: default;
+}
+
+.container_city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+}
+
+.inactive_like_city {
+  fill: rgb(217, 217, 217);
+  cursor: pointer;
+}
+
+.active_like_city {
+  cursor: pointer;
+  fill: #f37171;
+}
+
+.container_temperature {
+  display: flex;
+  width: 300px;
+  height: 83px;
+  font-weight: 400;
+}
+
+.container_temperature span {
+  font-size: 70px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.img-weather {
+  position: relative;
+  right: 10px;
+}
+
+.img-weather img {
+  width: 70px;
+}
+
+.container_weather_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 20px;
+  width: 300px;
+  height: 110px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container_temp_info_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  height: 314px;
+  overflow: scroll;
+}
+
+.container_temp_info_time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  height: 100px;
+  font-size: 18px;
+  background-color: #ffffff08;
+  border: 1px solid #0000004b;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.temp_info_time_up {
+  font-weight: 500;
+  border-bottom: 1px solid #0000004b;
+  padding-bottom: 10px;
+}
+
+.temp_info_time_down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp_info_time_down_text {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.temp_info_time_down_img img {
+  width: 34px;
+}
+
+.locations_panel {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 584px;
+  z-index: 10;
+  background-color: #3d4a57;
+}
+
+.added_locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding-left: 20px;
+  width: 300px;
+  height: 60px;
+  border-bottom: 1px solid #00000063;
+  cursor: default;
+}
+
+.list_locations {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px;
+  gap: 20px;
+  width: 300px;
+  height: 500px;
+  overflow: scroll;
+}
+
+.favorite_city_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 255px;
+  height: 30px;
+}
+
+.delete_city_button {
+  fill: rgb(217, 217, 217);
+  cursor: pointer;
+}
+
+.delete_city_button:hover {
+  fill: #f37171;
+}
+
+.favorite_city_container button {
+  padding-top: 3px;
+}
+
+.favorite_city {
+  cursor: pointer;
+}
+
+.favorite_city:hover {
+  color: #ffffff;
+}
