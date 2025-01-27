@@ -24,7 +24,7 @@ To get started with the application, follow these steps:
 
 2. Navigate to the project directory:
    ```bash
-   cd weather-js/src
+   cd weather-widget/src
    ```
 
 3. Install Parcel for module bundling:
